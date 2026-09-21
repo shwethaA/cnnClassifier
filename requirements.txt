@@ -1,0 +1,14 @@
+ tensorflow
+ pandas
+ notebook
+ numpy
+ matplotlib
+ seaborn
+ pyYAML
+ tqdm
+ ensure
+ python-box
+ joblib
+ types-PyYAML
+ scipy
+ -e .
