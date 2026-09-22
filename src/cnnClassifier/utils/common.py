@@ -1,7 +1,7 @@
 import os
 from box.exceptions import BoxValueError
 import yaml
-from cnnClassifier import logger
+from cnnClassifier.logging import logger
 import json
 import joblib
 from ensure import ensure_annotations
@@ -11,7 +11,7 @@ from typing import Any
 import base64
 
 @ensure_annotations
-def read_yaml(path_to_yaml: str) -> ConfigBox:
+def read_yaml(path_to_yaml: Path) -> ConfigBox:
     """reads yaml file and returns
 
     Args:
@@ -26,7 +26,7 @@ def read_yaml(path_to_yaml: str) -> ConfigBox:
     """
     try:
         with open(path_to_yaml) as yaml_file:
-            content = yaml.safe_load(path_to_yaml)
+            content = yaml.safe_load(yaml_file)
             logger.info(f"yaml file: {path_to_yaml} loaded successfully")
             return ConfigBox(content)
     except BoxValueError:
