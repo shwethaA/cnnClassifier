@@ -1,8 +1,8 @@
 from cnnClassifier.config import ConfigurationManager
 from cnnClassifier.components import DataIngestion
-from cnnClassifier.logging import logging
+from cnnClassifier.logging import logger
 
-class DataIngestionPipeline:
+class  DataIngestionPipeline:
     def __init__(self):
         pass
 
